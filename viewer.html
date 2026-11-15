@@ -1,0 +1,24 @@
+<!doctype html>
+<!-- dev tool: /viewer.html?m=rover.glb shows one model -->
+<html><head><meta charset="utf-8"><title>Model viewer</title>
+<style>html,body{margin:0;height:100%;overflow:hidden;background:#333}</style></head>
+<body><script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+const r = new THREE.WebGLRenderer({ antialias: true }); r.setSize(innerWidth, innerHeight); document.body.appendChild(r.domElement);
+r.toneMapping = THREE.ACESFilmicToneMapping;
+const s = new THREE.Scene(); s.background = new THREE.Color(0x333333);
+s.environment = new THREE.PMREMGenerator(r).fromScene(new RoomEnvironment()).texture;
+const c = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.01, 500);
+const ctl = new OrbitControls(c, r.domElement);
+const m = new URLSearchParams(location.search).get('m') || 'rover.glb';
+new GLTFLoader().load('/models/' + m, (g) => {
+  s.add(g.scene);
+  const b = new THREE.Box3().setFromObject(g.scene), size = b.getSize(new THREE.Vector3()).length(), ctr = b.getCenter(new THREE.Vector3());
+  ctl.target.copy(ctr); c.position.copy(ctr).add(new THREE.Vector3(0.6, 0.4, 0.8).multiplyScalar(size)); ctl.update();
+  window.view = { c, ctl, ctr, size, scene: g.scene };
+});
+r.setAnimationLoop(() => r.render(s, c));
+</script></body></html>

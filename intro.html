@@ -1,0 +1,47 @@
+<!doctype html>
+<!-- preview page for the Day 1 intro cinematic (src/intro.js). The game will call playIntro() itself once approved. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASTROPHAGE · Day 1 intro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&display=swap" rel="stylesheet" />
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #000; color: #fff; font-family: system-ui, sans-serif; }
+    canvas { display: block; }
+    #go { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 5; background: #000; }
+    #go button { font: 900 20px Orbitron, system-ui; letter-spacing: .12em; padding: 16px 40px; border-radius: 40px; border: 2px solid #8fd0ff;
+      background: #173f9d; color: #fff; cursor: pointer; }
+    #ov { position: fixed; inset: 0; pointer-events: none; z-index: 4; }
+    .in-black { position: absolute; inset: 0; background: #000; }
+    .in-title { position: absolute; left: 0; right: 0; bottom: 14%; text-align: center; opacity: 0; text-shadow: 0 2px 12px #000; }
+    .in-title b { display: block; font: 900 clamp(18px, 3vw, 34px) Orbitron, system-ui; letter-spacing: .14em; }
+    .in-title span { display: block; margin-top: 8px; font: 600 clamp(12px, 1.6vw, 18px) Orbitron, system-ui; letter-spacing: .3em; color: #9cc4ff; }
+    .in-title.big { bottom: auto; top: 40%; } .in-title.big b { font-size: clamp(26px, 5vw, 64px); }
+    .in-count { position: absolute; top: 12%; width: 100%; text-align: center; font: 900 clamp(28px, 5vw, 60px) Orbitron, system-ui; color: #ffb347; text-shadow: 0 0 20px #ff7a1a; }
+    .in-note { position: absolute; left: 16px; bottom: 12px; font-size: 11px; opacity: .55; }
+    .in-skip { position: absolute; right: 18px; bottom: 16px; pointer-events: auto; padding: 8px 14px; border-radius: 20px; border: 1px solid #ffffff55;
+      background: #0008; color: #fff; cursor: pointer; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div id="go"><button>▶ PLAY DAY 1 INTRO</button></div>
+  <div id="ov"></div>
+  <script type="module">
+    import * as THREE from 'three';
+    import { playIntro, sfx } from '/src/intro.js';
+    const renderer = new THREE.WebGLRenderer({ antialias: true, logarithmicDepthBuffer: true });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2)); renderer.setSize(innerWidth, innerHeight);
+    renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    document.body.appendChild(renderer.domElement);
+    const go = document.querySelector('#go button');
+    go.onclick = async () => {
+      sfx.start(); go.textContent = 'LOADING…'; go.disabled = true;
+      const intro = await playIntro({ renderer, overlay: document.getElementById('ov'), onDone: () => { document.getElementById('go').style.display = 'flex'; go.textContent = '↻ REPLAY'; go.disabled = false; } });
+      document.getElementById('go').style.display = 'none';
+      window.intro = intro;   // dev: intro.seek(seconds)
+    };
+  </script>
+</body>
+</html>

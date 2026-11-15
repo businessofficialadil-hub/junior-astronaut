@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Junior Astronaut Mission Trainer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="start">
+    <div class="st-top">
+      <div class="st-eyebrow" id="st-eyebrow">MOON BASE SURVIVAL · 7 SOLS</div>
+      <h1 class="st-title">JUNIOR ASTRONAUT<span>MISSION TRAINER</span></h1>
+      <p class="st-tag">Share the power. Survive real solar storms. Keep your crew alive.</p>
+    </div>
+    <div class="st-menu">
+      <button id="play" disabled>▶ START MISSION</button>
+      <div id="loadbar"><div></div></div>
+      <p id="loading">Loading lunar base…</p>
+    </div>
+    <div class="st-cards">
+      <div class="st-card"><b>⚡ Share the power</b><span>Air, food, shield or science? Your solar panels can't feed them all.</span></div>
+      <div class="st-card"><b>☢️ Real solar storms</b><span>Every storm comes from NASA's DONKI space weather database.</span></div>
+      <div class="st-card"><b>🧑‍🚀 Explore the base</b><span>Talk to the crew, drive the rover and bring back a Moon rock.</span></div>
+    </div>
+    <div class="st-keys">
+      <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move</span><span><kbd>Mouse</kbd> look</span><span><kbd>Shift</kbd> run</span>
+      <span><kbd>Space</kbd> jump</span><span><kbd>E</kbd> interact</span><span><kbd>Tab</kbd> Mission Control</span><span><kbd>J</kbd> task list</span><span><kbd>Esc</kbd> pause</span>
+    </div>
+    <p class="credit">Player astronaut: <a href="https://sketchfab.com/3d-models/astronaut-by-jungle-jim-c775a977606a4e4e990afe783c6bc845" target="_blank" rel="noopener">"Astronaut" by Jungle Jim</a>,
+      licensed <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+      Rover: Perseverance model, NASA/JPL-Caltech (NASA 3D Resources). Textures: ambientCG (CC0).</p>
+  </div>
+  <div id="rotate">📱↻ Turn your phone sideways to play</div>
+  <div id="hud">
+    <div id="objective"></div>
+    <div id="tasklist"><div class="tl-head">CREW TASKS <span id="tl-count"></span> <small>[J] hide</small></div><ol id="tl-items"></ol></div>
+    <div id="compass"><div id="arrow">▲</div><div id="dist"></div></div>
+    <div id="room"></div>
+    <div id="crosshair">+</div>
+    <div id="lookHint">🖱️ Click to look around</div>
+    <div id="prompt"></div>
+    <div id="dialogue"><b id="speaker"></b><span id="line"></span><div id="choices"></div><small id="more">E to continue</small></div>
+    <div id="drive"><b>ROVER</b> <span id="speed">0 km/h</span>
+      <small>W/S drive · A/D steer · Shift boost · Mouse look · V Mastcam · E get out</small></div>
+    <div id="edge">⚠ Edge of the survey area — turn back</div>
+    <div id="tablet"><h2>MISSION LOG</h2><ol id="steps"></ol></div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

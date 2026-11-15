@@ -1,0 +1,212 @@
+[
+ {
+  "date": "2012-01-23",
+  "severity": 3,
+  "instrument": "GOES13: SEM/EPS >100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/98/-1"
+ },
+ {
+  "date": "2012-01-24",
+  "severity": 1,
+  "instrument": "STEREO A: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/132/-1"
+ },
+ {
+  "date": "2012-01-27",
+  "severity": 2,
+  "instrument": "SOHO: COSTEP 15.8-39.8 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/1117/-1"
+ },
+ {
+  "date": "2012-03-04",
+  "severity": 1,
+  "instrument": "STEREO B: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/167/-1"
+ },
+ {
+  "date": "2012-03-07",
+  "severity": 3,
+  "instrument": "GOES13: SEM/EPS >100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/235/-1"
+ },
+ {
+  "date": "2012-03-09",
+  "severity": 1,
+  "instrument": "STEREO A: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/364/-1"
+ },
+ {
+  "date": "2012-03-13",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/418/-1"
+ },
+ {
+  "date": "2012-03-19",
+  "severity": 1,
+  "instrument": "STEREO A: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/461/-1"
+ },
+ {
+  "date": "2012-03-21",
+  "severity": 1,
+  "instrument": "STEREO A: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/513/-1"
+ },
+ {
+  "date": "2012-03-24",
+  "severity": 1,
+  "instrument": "STEREO A: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/523/-1"
+ },
+ {
+  "date": "2012-03-27",
+  "severity": 1,
+  "instrument": "STEREO B: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/529/-1"
+ },
+ {
+  "date": "2012-05-17",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/670/-1"
+ },
+ {
+  "date": "2012-05-26",
+  "severity": 1,
+  "instrument": "STEREO A: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/677/-1"
+ },
+ {
+  "date": "2012-05-27",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/679/-1"
+ },
+ {
+  "date": "2012-06-16",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/718/-1"
+ },
+ {
+  "date": "2012-07-07",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/827/-1"
+ },
+ {
+  "date": "2012-07-09",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/845/-1"
+ },
+ {
+  "date": "2012-07-12",
+  "severity": 2,
+  "instrument": "SOHO: COSTEP 15.8-39.8 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8/-1"
+ },
+ {
+  "date": "2012-07-17",
+  "severity": 2,
+  "instrument": "SOHO: COSTEP 15.8-39.8 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/868/-1"
+ },
+ {
+  "date": "2012-07-23",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/932/-1"
+ },
+ {
+  "date": "2012-07-24",
+  "severity": 1,
+  "instrument": "STEREO B: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/949/-1"
+ },
+ {
+  "date": "2012-08-19",
+  "severity": 1,
+  "instrument": "STEREO A: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/966/-1"
+ },
+ {
+  "date": "2013-04-11",
+  "severity": 3,
+  "instrument": "GOES13: SEM/EPS >100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/376/-1"
+ },
+ {
+  "date": "2013-05-13",
+  "severity": 1,
+  "instrument": "STEREO B: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/219/-1"
+ },
+ {
+  "date": "2013-05-15",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/262/-1"
+ },
+ {
+  "date": "2013-05-22",
+  "severity": 3,
+  "instrument": "GOES13: SEM/EPS >100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/297/-1"
+ },
+ {
+  "date": "2014-01-06",
+  "severity": 3,
+  "instrument": "GOES13: SEM/EPS >100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4332/-1"
+ },
+ {
+  "date": "2014-01-07",
+  "severity": 3,
+  "instrument": "GOES13: SEM/EPS >100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4356/-1"
+ },
+ {
+  "date": "2014-01-08",
+  "severity": 1,
+  "instrument": "STEREO A: IMPACT 13-100 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4381/-1"
+ },
+ {
+  "date": "2014-02-20",
+  "severity": 2,
+  "instrument": "SOHO: COSTEP 15.8-39.8 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4634/-1"
+ },
+ {
+  "date": "2014-02-25",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/4638/-1"
+ },
+ {
+  "date": "2015-06-18",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8698/-1"
+ },
+ {
+  "date": "2015-06-21",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8743/-1"
+ },
+ {
+  "date": "2015-06-25",
+  "severity": 2,
+  "instrument": "SOHO: COSTEP 15.8-39.8 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8822/-1"
+ },
+ {
+  "date": "2015-06-26",
+  "severity": 2,
+  "instrument": "GOES13: SEM/EPS >10 MeV",
+  "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/8819/-1"
+ }
+]

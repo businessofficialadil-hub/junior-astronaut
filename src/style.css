@@ -46,7 +46,7 @@ kbd { display: inline-block; min-width: 18px; padding: 2px 6px; margin: 0 2px; b
   padding: 8px 16px; border-radius: 6px; font-weight: bold; }
 #crosshair { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: .6; }
 #prompt { position: absolute; top: 58%; width: 100%; text-align: center; text-shadow: 0 0 4px #000; }
-#dialogue { display: none; position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); width: min(720px, 90vw);
+#dialogue { display: none; position: absolute; bottom: 84px; left: 50%; transform: translateX(-50%); width: min(720px, 90vw);
   background: #050b16e6; border: 1px solid #2b6cff; padding: 14px 18px; border-radius: 6px; }
 #dialogue b { display: block; color: #7fb0ff; margin-bottom: 6px; }
 #dialogue #more { display: block; text-align: right; opacity: .6; margin-top: 8px; }
@@ -63,8 +63,8 @@ kbd { display: inline-block; min-width: 18px; padding: 2px 6px; margin: 0 2px; b
 #tablet li.now { color: #fff; }
 
 /* ---------- Mission Control ---------- */
-.mc { display: none; position: fixed; inset: 0; z-index: 20; align-items: center; justify-content: center; background: #000a; padding: 12px; }
-.mc-panel { width: min(760px, 100%); max-height: 94vh; overflow: auto; background: #0a1626f5; border: 1px solid #2b6cff88; border-radius: 12px;
+.mc { display: none; position: fixed; inset: 0; z-index: 20; align-items: center; justify-content: center; background: #000a; padding: 12px 12px 80px; }
+.mc-panel { width: min(760px, 100%); max-height: calc(100vh - 96px); overflow: auto; background: #0a1626f5; border: 1px solid #2b6cff88; border-radius: 12px;
   padding: 16px 20px; color: #e8f1ff; font-size: 15px; line-height: 1.45; }
 .mc-head h2, .mc-report h2 { margin: 0 0 2px; font-size: 20px; }
 .mc-panel h3 { margin: 14px 0 6px; font-size: 16px; display: flex; justify-content: space-between; }
@@ -173,8 +173,8 @@ body.touch .st-keys { display: none; }
 @media (max-width: 900px), (max-height: 500px) {
   body.touch #compass { transform: translateX(-50%) scale(.8); transform-origin: top center; }
   body.touch #objective { font-size: 13px; max-width: 45vw; }
-  body.touch #dialogue { bottom: 12px; font-size: 14px; padding: 10px 14px; width: min(560px, 62vw); left: 40%; }
-  body.touch .mc-panel { max-height: 92vh; overflow-y: auto; font-size: 13px; }
+  body.touch #dialogue { bottom: 12px; font-size: 14px; padding: 10px 14px; width: min(520px, 56vw); left: 38%; box-sizing: border-box; }
+  body.touch .mc-panel { overflow-y: auto; font-size: 13px; }
   body.touch #room { top: 8px; right: 8px; padding: 4px 8px; font-size: 13px; }
   body.touch .mc-hud { top: 40px; right: 8px; font-size: 12px; padding: 4px 8px; }
   body.touch .mc-hud small { display: none; }
@@ -191,4 +191,11 @@ body.touch .st-keys { display: none; }
   .st-tag { font-size: 12px; margin-top: 4px; }
   #play { padding: 10px 30px; font-size: 15px; }
   .st-cards { display: none; }
+}
+
+/* Netlify puts a "Powered by Netlify" badge (about 200 x 65 px) in the bottom-right corner, on top of everything:
+   keep our own text and buttons out of that corner */
+#start .credit { padding-right: 215px; box-sizing: border-box; }
+@media (max-height: 500px) {
+  .mc-coach:not(.docked) { top: 46px; left: 40%; width: min(460px, 60vw); font-size: 13px; }
 }

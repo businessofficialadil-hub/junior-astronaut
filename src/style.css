@@ -120,7 +120,7 @@ kbd { display: inline-block; min-width: 18px; padding: 2px 6px; margin: 0 2px; b
 .in-count { position: absolute; top: 12%; width: 100%; text-align: center; font: 900 clamp(28px, 5vw, 60px) Orbitron, system-ui, sans-serif;
   color: #ffb347; text-shadow: 0 0 20px #ff7a1a; }
 .in-note { position: absolute; left: 16px; bottom: 12px; font-size: 11px; opacity: .55; }
-.in-skip { position: absolute; right: 18px; bottom: 16px; pointer-events: auto; padding: 8px 14px; border-radius: 20px; border: 1px solid #ffffff55;
+.in-skip { position: absolute; right: 18px; top: 16px; pointer-events: auto; padding: 8px 14px; border-radius: 20px; border: 1px solid #ffffff55;
   background: #0008; color: #fff; cursor: pointer; font-size: 13px; }
 #start.landed .st-tag, #start.landed .st-cards { display: none; }
 #start.landed { background: radial-gradient(ellipse at center, #0000 40%, #000b 100%); justify-content: center; gap: 28px; }
@@ -155,7 +155,7 @@ body.touch .st-keys { display: none; }
 #touch button small { font-size: 10px; font-weight: 600; opacity: .8; }
 #touch button.on { background: #ffbe00cc; color: #111; }
 #touch .big { width: 84px; height: 84px; font-size: 30px; background: #173f9dcc; }
-.t-btns { position: absolute; right: max(16px, env(safe-area-inset-right)); bottom: 20px; display: grid; grid-template-columns: auto auto; gap: 10px; align-items: end; }
+.t-btns { position: absolute; right: max(16px, env(safe-area-inset-right)); bottom: 78px;   /* clear of the "Powered by Netlify" badge in the corner */ display: grid; grid-template-columns: auto auto; gap: 10px; align-items: end; }
 .t-btns .big { grid-row: span 2; }
 #touch .drv { display: none; }
 #touch.driving .drv { display: flex; }

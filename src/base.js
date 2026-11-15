@@ -79,7 +79,7 @@ function materials() {
   };
   const panelled = (cols, rows, rivets, color, o = {}) => {
     const m = new THREE.MeshStandardMaterial({ color, roughness: o.roughness ?? 0.82, metalness: o.metalness ?? 0.05,
-      map: seams(cols, rows, rivets, true), bumpMap: seams(cols, rows, rivets, false), bumpScale: 10, normalMap: tex('SheetMetal004', 'normalgl') });   // no roughness map: its low values made the panels mirror-glossy
+      map: seams(cols, rows, rivets, true), bumpMap: seams(cols, rows, rivets, false), bumpScale: 10, normalMap: tex('PaintedMetal004', 'normalgl') });   // no roughness map: its low values made the panels mirror-glossy
     m.normalScale.set(0.35, 0.35); return m;
   };
   MAT = {
@@ -115,7 +115,7 @@ function materials() {
     for (let i = -w; i < w * 2; i += 64) { g.beginPath(); g.moveTo(i, 0); g.lineTo(i + 32, 0); g.lineTo(i + 32 - h, h); g.lineTo(i - h, h); g.fill(); }
   });
   stripes.wrapS = stripes.wrapT = THREE.RepeatWrapping;
-  MAT.stripe = new THREE.MeshStandardMaterial({ map: stripes, roughness: 0.7, normalMap: tex('SheetMetal004', 'normalgl') });
+  MAT.stripe = new THREE.MeshStandardMaterial({ map: stripes, roughness: 0.7, normalMap: tex('PaintedMetal004', 'normalgl') });
   return MAT;
 }
 

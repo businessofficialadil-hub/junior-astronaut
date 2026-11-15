@@ -183,3 +183,12 @@ body.touch .st-keys { display: none; }
   body.touch #tasklist .tl-head small, body.touch #tasklist .tl-head span:last-child { display: none; }
   body.touch .t-top { top: 76px; }
 }
+/* short screens (phone held sideways): smaller title, no feature cards, so START and the credits fit */
+@media (max-height: 500px) {
+  #start { padding-top: 10px !important; padding-bottom: 8px !important; }
+  .st-eyebrow { font-size: 10px; }
+  .st-title { font-size: clamp(22px, 5vw, 40px); margin: 4px 0; }
+  .st-tag { font-size: 12px; margin-top: 4px; }
+  #play { padding: 10px 30px; font-size: 15px; }
+  .st-cards { display: none; }
+}
